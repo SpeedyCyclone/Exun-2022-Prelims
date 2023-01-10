@@ -1,0 +1,51 @@
+---
+const { class: className } = Astro.props;
+const { class1: className1 } = Astro.props;
+const { class2: className2 } = Astro.props;
+const { class3: className3 } = Astro.props;
+---
+
+<nav id="nav" class="dark:bg-gray-700">
+  <label id="name" class="name">GameStop</label>
+  <ul>
+    <li><a class={className} href="/" id="a1">Home</a></li>
+    <li id="hi"><a class={className1} href="/about" id="hi">About Us</a></li>
+    <li><a class={className2} href="/products" id="a1">Products</a></li>
+    <li><a class={className3} href="/contact" id="a1">Contact Us</a></li>
+    <button
+      x-data="{
+        toggle: () => {
+            if (localStorage.theme === 'dark') {
+                localStorage.theme = 'light';
+                document.documentElement.classList.remove('dark');
+            } else {
+                localStorage.theme = 'dark';
+                document.documentElement.classList.add('dark');
+            }
+        },
+    }"
+      class="mt-2 px-3 py-2 rounded-lg font-semibold text-white focus:outline-none ml-56 text-xl hover:bg-[#002d62]"
+      x-on:click="toggle"
+    >
+      Dark/Light Mode
+    </button>
+  </ul>
+</nav>
+
+<script>
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+
+  localStorage.theme = "light";
+
+  localStorage.theme = "dark";
+
+  localStorage.removeItem("theme");
+</script>

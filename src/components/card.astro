@@ -1,0 +1,23 @@
+---
+const { src } = Astro.props;
+const { tag } = Astro.props;
+const { name } = Astro.props;
+const { price } = Astro.props;
+---
+
+<div class="card">
+  <img class="cappuccino" src={src} alt="" />
+  <i class="bestseller">{tag}</i>
+  <div class="card__title">{name}</div>
+  <div class="card__about">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo qui
+      consequuntur soluta id quisquam magnam fugit non, tenetur labore eos
+      debitis numquam!
+    </p>
+  </div>
+  <div class="card__price">
+    <h3>{price}</h3>
+    <button>Order Now</button>
+  </div>
+</div>

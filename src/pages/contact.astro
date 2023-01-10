@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/homelayout.astro";
+import "../styles/home.css";
+import Navbar from "../components/navbar.astro";
+import Form from "../components/form.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+  </head>
+  <body class="dark:bg-slate-500">
+    <Layout title="Contact Us">
+      <Navbar class3="active" />
+      <Form />
+    </Layout>
+    <style>
+      p {
+        font-family: "American Captain", sans-serif;
+      }
+    </style>
+  </body>
+</html>

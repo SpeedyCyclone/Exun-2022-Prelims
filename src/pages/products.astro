@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/homelayout.astro";
+import "../styles/home.css";
+import Navbar from "../components/navbar.astro";
+import Card from "../components/card.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+  </head>
+  <body class="dark:bg-slate-500 bg-white">
+    <Layout title="Products">
+      <Navbar class2="active" />
+      <div class="products">
+        <div class="products__title">
+          <h1 class="title">Our products</h1>
+        </div>
+        <div class="products__cards">
+          <Card
+            src="./images/product8.webp"
+            tag="All New"
+            name="Retro-Bit Super Retro-Cade"
+            price="$40"
+          />
+          <Card
+            src="./images/product.jpg"
+            tag="Bestseller"
+            name="Ultimate Console Pack"
+            price="$30"
+          />
+          <Card
+            src="./images/product6.webp"
+            tag="Original"
+            name="Atari Flashback and Gold Console"
+            price="$29"
+          />
+          <Card
+            src="./images/product9.webp"
+            tag="Premium"
+            name="Evercade Premium"
+            price="$45"
+          />
+          <Card
+            src="./images/product3.webp"
+            tag="New Arrival"
+            name="Super NES Classic"
+            price="$18"
+          />
+          <Card
+            src="./images/product4.webp"
+            tag="Original"
+            name="Polymega"
+            price="$30"
+          />
+          <Card
+            src="./images/product5.webp"
+            tag="Bestseller"
+            name="Game Boy"
+            price="$10"
+          />
+
+          <Card
+            src="./images/product7.webp"
+            tag="Retro"
+            name="C64 Mini Version"
+            price="$9"
+          />
+          <Card
+            src="./images/product1.webp"
+            tag="Original"
+            name="Pac Man"
+            price="$10"
+          />
+          <Card
+            src="./images/product11.jpeg"
+            tag="Discount"
+            name="Tetris"
+            price="$5"
+          />
+          <Card
+            src="./images/product12.webp"
+            tag="New Arrival"
+            name="TurboGrafx-16 mini"
+            price="$30"
+          />
+          <Card
+            src="./images/product10.webp"
+            tag="Discount"
+            name="NEOGEO Mini"
+            price="$10"
+          />
+        </div>
+      </div>
+    </Layout>
+
+    <style>
+      body {
+        font-family: "American Captain", sans-serif;
+      }
+    </style>
+  </body>
+</html>
